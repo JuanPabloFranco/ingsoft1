@@ -18,6 +18,8 @@
                     <?php
                     if (isset($_GET['page2'])) {
                         include $_GET['page2'] . ".php";
+                    }else{
+                        include 'listarCategoria.php';
                     } 
                     ?>
                 </td>

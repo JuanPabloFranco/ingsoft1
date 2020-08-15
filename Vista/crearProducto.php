@@ -3,7 +3,8 @@
         <?php
         include 'Conexion/conexion.php';
         if (isset($_GET['id'])) {
-            $consulta = mysqli_fetch_row(ejecutarSQL::consultar("SELECT codigo_prod, nombre_prod, marca_prod, id_categoria, id_proveedor, precio_prod FROM proveedores WHERE id=" . $_GET['id']));
+            $consulta = mysqli_fetch_row(ejecutarSQL::consultar("SELECT codigo_prod, nombre_prod, marca_prod, id_categoria, id_proveedor, precio_prod FROM proveedores, productos, categorias WHERE "
+                    . "productos.id_categoria=categorias.id AND productos.id_proveedor=proveedores.id AND productos.id=" . $_GET['id']));
             ?>
             <title>Producto / Editar</title>
             <?php
@@ -106,7 +107,7 @@
                                     <div class="input-group-addon"><i class="fa fa-google"></i></div>
                                     <input class="form-control all-elements-tooltip" id="txtPrecio" type="number" placeholder="Ingrese el precio del producto" required name="precio_prod" data-toggle="tooltip" data-placement="top" title="Ingrese el precio del producto" value="<?php
                                     if (isset($_GET['id'])) {
-                                        echo $consulta[4];
+                                        echo $consulta[5];
                                     }
                                     ?>">                              
                                 </div>
@@ -134,6 +135,8 @@
             </div>
         </section>
         <script>
+            document.getElementById("selCategoria").value = "<?php echo $consulta[3]?>";
+            document.getElementById("selProveedor").value = "<?php echo $consulta[4]?>";
             $(document).ready(function () {
                 $('#producto form').submit(function (e) {
                     e.preventDefault();

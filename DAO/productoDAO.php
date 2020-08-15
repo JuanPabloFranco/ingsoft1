@@ -20,7 +20,7 @@ class productoDAO {
             <?php
         } else {
             ?>
-            <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al registrar el producto
+            <img src="Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al registrar el producto
             <?php
         }
     }
@@ -43,7 +43,7 @@ class productoDAO {
     }
 
     public function buscar(clsProducto $obj) {
-        $busqueda = ejecutarSQL::consultar("SELECT codigo_prod, nombre_prod, marca_prod, nombre_categoria, nombre_proveedor, precio_prod FROM productos, categorias, proveedores WHERE productos.id_categoria=categorias.id AND productos.id_proveedor=proveedores.id AND (productos.codigo_prod REGEXP '" . $obj->getBusqueda() . "' OR productos.nombre_prod REGEXP '" . $obj->getBusqueda()  . "' OR productos.marca_prod REGEXP '" . $obj->getBusqueda() . "')");
+        $busqueda = ejecutarSQL::consultar("SELECT productos.id, codigo_prod, nombre_prod, marca_prod, nombre_categoria, nombre_proveedor, precio_prod FROM productos, categorias, proveedores WHERE productos.id_categoria=categorias.id AND productos.id_proveedor=proveedores.id AND (productos.codigo_prod REGEXP '" . $obj->getBusqueda() . "' OR productos.nombre_prod REGEXP '" . $obj->getBusqueda()  . "' OR productos.marca_prod REGEXP '" . $obj->getBusqueda() . "')");
         if ($busqueda->num_rows > 0) {
             $cant = 0;
             ?>
@@ -64,19 +64,19 @@ class productoDAO {
                         </thead>
                         <tbody>
                             <?php
-                            while ($proveedor = mysqli_fetch_array($busqueda)) {
+                            while ($producto = mysqli_fetch_array($busqueda)) {
                                 $cant++;
                                 ?>
                             <div id="busqueda_cat">
                                 <tr style="text-align: center">                      
                                     <td><?php echo $cant ?></td>
-                                    <td><?php echo $proveedor['codigo_prod'] ?></td>
-                                    <td><?php echo $proveedor['nombre_prod'] ?></td>
-                                    <td><?php echo $proveedor['marca_prod'] ?></td>
-                                    <td><?php echo $proveedor['nombre_categoria'] ?></td>
-                                    <td><?php echo $proveedor['nombre_proveedor'] ?></td>
-                                    <td>$<?php echo $proveedor['precio_prod'] ?></td>
-                                    <td><a href="index.php?page=proveedorMP&&page2=crearProveedor&&id=<?php echo $proveedor['id'];?>"><img src="Recursos/img/btn_editar.png" style="width: 20px"></a></td>                                                                                                           
+                                    <td><?php echo $producto['codigo_prod'] ?></td>
+                                    <td><?php echo $producto['nombre_prod'] ?></td>
+                                    <td><?php echo $producto['marca_prod'] ?></td>
+                                    <td><?php echo $producto['nombre_categoria'] ?></td>
+                                    <td><?php echo $producto['nombre_proveedor'] ?></td>
+                                    <td>$<?php echo $producto['precio_prod'] ?></td>
+                                    <td><a href="index.php?page=productoMP&&page2=crearProducto&&id=<?php echo $producto['id'];?>"><img src="Recursos/img/btn_editar.png" style="width: 20px"></a></td>                                                                                                           
                                 </tr>
                             </div>
                             <?php
@@ -89,7 +89,7 @@ class productoDAO {
             <?php
         } else {
             ?>
-            <img src=Recursos/img/error.png" class="center-all-contens"><br>No se encontraron resultados
+            <img src="Recursos/img/error.png" class="center-all-contens"><br>No se encontraron resultados
             <?php
         }
     }
