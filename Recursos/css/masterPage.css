@@ -1,0 +1,674 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/10/2015, 11:27:31 AM
+    Author     : JUAN PABLO
+*/
+
+.encabezadoPpal{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/banner2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoAmor{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerAmor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoIndependencia{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerDiaIndependencia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.bordeAvatar{
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.btnMenu{   
+    width: 100px;
+    height: auto;
+    margin: 3px;   
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../imagenes/felizCumpleP.png);
+    background-size: contain;
+}
+.botonImagen{
+    width: auto;
+    height: auto;
+    background: none;
+    border-style: none;
+    border-color: none;
+    border-width: 0px;
+    border-spacing: 0px;
+}
+
+.botonImagen:hover{
+    width: auto;
+    height: auto;
+    background: none;
+    border-style: none;
+    border-color: none;
+    border-width: 0px;
+    border-spacing: 0px;
+}
+
+head{    
+    position: fixed !important;/*el head va ser siempre estatico**/
+}
+
+/*a{
+    color: white;
+    text-align: center;
+    height: 15px;
+    align-content: center;
+}*/
+
+.encabezado{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoHallowen1{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerHallowen1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoHallowen2{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerHallowen2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoHallowen3{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerHallowen3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoMesMadre{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerMesMadre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoMesPadre{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/bannerMesPadre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoNavidad1{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/navidad1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoNavidad2{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/navidad2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoNavidad3{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/navidad3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoNavidad4{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/navidad4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoPesebre{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/pesebre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.encabezadoVelitas{
+    width: 100px;
+    height: auto;
+    margin: 1px;
+    border-style: solid;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background-image: url(../imagenes/velitas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-align: center;*/
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+
+.tablaContenido{
+    margin: 1px;
+    border-style: outset;
+    border-color: #010d55;
+    border-width: 1px;
+    border-spacing: 15px;
+    font-size: 15px;
+    border-radius: 0px 0px 4px 4px;
+    background: border-box;
+    text-align: left;    
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.oculto{
+    display: none;
+}
+
+.nombreDesc{
+    text-align: end;
+    border: none;
+    font-size: 15px;
+    color: white;  
+    font-style: italic;
+    font-weight: bold;
+}
+
+.nombreRG{
+    border: none;
+    font-size: 15px;
+    color: white;  
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*.menuContenido{       
+    width: 160px;
+    height: auto;
+    background-color: #f4e2fb;    
+    background-color: #8736b6;
+    text-align: center;
+    border-style: solid;
+    border-color: #8736b6;
+    border-width: 1px;
+    border-spacing: 15px;
+    border-radius: 8px 8px 8px 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0.5px 0.5px 3px black;
+    
+}*/
+
+.menuHorizontal{    
+    width: 100%;
+    height: 20px;
+    background-color: #8736b6;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-spacing: 15px;
+    border-radius: 8px 8px 8px 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0.5px 0.5px 3px black;
+
+}
+
+.contenido{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    alignment-adjust: middle;
+}
+
+#main-content a.cgu-buttons {
+    background-color: #000000;
+    background-image: none !important;
+    background-position: top;
+    background-repeat: repeat-x;
+    color: #FFFFFF !important;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    overflow: visible;
+    padding: 2px 3px;
+    width: auto!important;
+}
+.boton{
+    color: white;
+    width: 150px;
+    height: auto;
+    margin: 1px;
+    border-style: outset;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-spacing: 5px;
+    font-size: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background: white;
+    box-shadow: 0.5px 0.5px 3px black;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.boton:hover{
+    background: #ededed;
+}
+
+
+.botonDesc{
+    width: auto;
+    margin: 1px;
+    border-style: outset;
+    border-color: #010d55;
+    border-width: 1px;
+    border-spacing: 15px;
+    font-size: 15px;
+    border-radius: 4px 4px 4px 4px;
+    background: 055906;
+    color: black;
+    box-shadow: 0.5px 0.5px 3px black;
+    font-style: italic;
+    font-family:sans-serif;
+    font-weight: bold;
+
+}
+
+.botonDesc:hover{
+    background: greenyellow;
+
+}
+
+.cajaTexto{
+    font-style: italic;
+    font-family:sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+h5{
+    color: white;    
+}
+
+h4{
+    height: auto;
+    border-color:#010d55;
+    border: 1px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: black;
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    /*color: black;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*white-space: nowrap;*/
+}
+
+.imgLogin{
+    text-align: end;
+}
+
+.imgLoginPpal{
+    text-align: center;
+}
+
+.imgLogo{
+    background-image: url(../imagenes/logoCR2.png);
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    border: none;
+    text-align: end;
+    border-style: 0px;
+}
+
+
+#masthead img, #featured-content img, #recent-content img, .entry-content img, .entry-thumb img, .comment-content img, .widget img {
+    border: none;
+}
+
+a img {
+    border: none;
+}
+
+img {
+    border: none;
+    border-style: none;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Default Styles 
+--------------------------------------------------------------------*/
+
+body {
+    background: url('img/denim.png');
+    font-family: 'Droid Sans', sans-serif;;
+}
+
+.clearfix {
+    clear: both;
+}
+.menuTitulos{
+    width: 100%;
+    height: auto;
+    margin:  auto;
+}
+
+.menuTitulos tr{
+    background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#ccc));
+    background-image: linear-gradient(#fff, #ccc);
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
+    padding: 0 10px;
+    position: relative;
+}
+
+.menuTitulos td{
+    float: right;
+    position: relative;
+}
+
+.wrap {
+    width: auto;
+    height: auto;
+    margin:  auto;
+}
+
+nav {
+    background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#ccc));
+    background-image: linear-gradient(#fff, #ccc);
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
+    padding: 0 10px;
+    position: relative;
+}
+
+
+.menu li {
+    float: left;
+    position: relative;
+}
+
+.menu li a {
+    color: #444;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin: 4px 4px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background: -webkit-gradient(linear, center top, center bottom, from(#ededed), to(#fff));
+    background-image: linear-gradient(#ededed, #fff);
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
+    color: #222;
+}
+
+/* Dropdown styles */
+
+.menu ul {
+    position: absolute;
+    left: -9999px;
+    list-style: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.menu ul li {
+    float: none;
+}
+
+.menu ul a {
+    white-space: nowrap;
+}
+
+/* Displays the dropdown on hover and moves back into position */
+.menu li:hover ul {
+    background: rgba(255,255,255,0.7);
+    border-radius: 0 0 6px 6px;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4);
+    left: 5px;
+    opacity: 1;
+    background-color: white;
+}
+
+/* Persistant Hover State */
+.menu li:hover a {
+    background: -webkit-gradient(linear, center top, center bottom, from(#ccc), to(#ededed));
+    background-image: linear-gradient(#ccc, #ededed);
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
+    color: #222;
+}
+
+.menu li:hover ul a {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.menu li:hover ul li a:hover {
+    background-image: linear-gradient(#ededed, #fff);
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.3);
+}
+
+label{
+    color: #444;
+    display: block;
+    font-size: 12px;
+    line-height: 0px;
+    padding: 4px 8px;
+    margin: 8px 8px;
+    vertical-align: middle;
+}
+
+
+

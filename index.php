@@ -1,7 +1,4 @@
 <?php
-session_start();
-include 'Modelo/clsConexion.php';
-$conexion = new clsConexion();
 $fecha = date("Y") . "-" . date("m") . "-" . date("d");
 $año = date("Y");
 $mes = date("m");
@@ -24,10 +21,9 @@ $dia = date("d");
         <!------ Include the above in your HEAD tag ---------->
         <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />        
-        <script type="text/javascript" src="Recursos/js/gestionLogin.js"></script>
+        <script type="text/javascript" src="Recursos/js/js.js"></script>
         <script src="Recursos/js/jquery-3.2.1.js" type="text/javascript"></script>
         <link rel="StyleSheet" href="Recursos/css/estilos.css" type="text/css">
-        <link rel="shortcut icon" type="image/x-icon" href="Recursos/imagenes/casaFesanco.ico" />
         <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     </head>

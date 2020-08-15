@@ -1,0 +1,84 @@
+
+.registro{
+    font-size: 15px;
+}
+
+.tablaLog{
+    color: black;
+    border-spacing: 10px;
+    text-align: center;
+    text-align-last: initial;    
+    box-shadow: 2px 2px 2px gray;    
+    background-color: #d3e098;
+    background-size: cover; 
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.tablaFocalizacion{
+    color: black; 
+    text-align: center;
+    text-align-last: initial;    
+    box-shadow: 2px 2px 2px black;    
+    background-color: #d3e098;
+    background-size: cover; 
+    border-radius: 15px 15px 15px 15px;
+    width: 40%;
+}
+
+.btnImg{    
+    width: auto;
+    height: 50px;
+    margin: 1px;    
+    border-style: hidden;   
+    border-width: 1px;
+    border-spacing: 30px;
+    font-size: 14px;    
+    text-align: center;
+    color: black;
+    align-items: flex-end;
+}
+
+.btn{
+    width: 80px;
+    height: 30px;
+    margin: 1px;
+    border-style: outset;
+    border-color: green;
+    border-width: 1px;
+    border-spacing: 30px;
+    font-size: 14px;
+    border-radius: 4px 4px 4px 4px;
+    background: white;
+    box-shadow: 0.5px 0.5px 3px black;
+    text-align: center;
+    color: green;
+    align-items: flex-end;
+}
+
+.btn:hover{
+    background: greenyellow;
+}
+
+.cajaTexto{
+    font-style: italic;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+
+.texto{
+    border-spacing: 5px;
+    font-size: 20px;
+    font-style: italic;
+    font-family:sans-serif;
+    color: black;
+}
+
+.msjLogin{
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+}
+h4{
+    color: black;
+}

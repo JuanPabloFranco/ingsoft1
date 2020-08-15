@@ -1,0 +1,44 @@
+.menu_botones{
+    vertical-align: initial;
+    text-align: center;
+    width: 4% !important;
+    height: 600px;
+    background-color: #e7e7e7;
+    box-shadow: 3px 3px 3px gray;
+    margin-bottom: 10px;
+}
+
+.contenidoSubMP{   
+    vertical-align: initial;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.contenidoSubMPListas{   
+    vertical-align: initial;
+    text-align: center;
+    width: 96% !important;
+    height: auto;
+    margin-right: 20px;
+}
+
+.marcoEncabezado{
+    text-align: center; 
+    background-color: #e7e7e7;
+    box-shadow: 3px 3px 3px gray;
+    margin-bottom: 10px;
+}
+
+.barraListas{
+   width: 100%;
+    height: auto;
+    margin: 5px;
+    border-color: #010d55;
+    border-width: 0.4px;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0.5px 0.5px 3px black;
+    background-color: #ddd9d8;
+}
+

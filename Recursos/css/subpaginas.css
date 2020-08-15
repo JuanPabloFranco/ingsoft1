@@ -1,0 +1,276 @@
+/*     
+    Author     : JUAN PABLO FRANCO
+*/
+#new-prod-index{
+    background-color: rgba(255,255,255,.9);
+}
+
+#container-form2{
+    width: 100%;
+    padding: 40px;
+    background-color: #0842ad;
+    border-radius: 7px;
+}
+
+
+.tittles-pages-logo{
+    font-family: "FontFamilyLogo";
+}
+
+.cuadroFoto{        
+    position: inherit;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border: solid black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px 8px 8px 8px;
+    color: white;
+}
+
+.menu_botones{
+    vertical-align: initial;
+    text-align: center;
+    width: 2% !important;
+    height: 600px;
+    background-color: #e7e7e7;
+    box-shadow: 3px 3px 3px gray;
+    margin-bottom: 10px;
+}
+
+.hojaFocalizacion{
+    text-align: center;
+    background-color: #8E402A;
+    color: white;
+}
+
+.msjValidacion{
+    font-family: cursive;
+    color: red;
+    font-size: 14px;
+    text-align: end;
+}
+
+.titulo{
+    font-family: inherit;
+    color: green;
+    font-size: 20px;
+    text-align: center;
+}
+
+.subTitulo{
+    font-family: inherit;
+    color: #075442;
+    font-size: 17px;
+    text-align: start;
+}
+
+.menuSubPaginas{
+    width: 100%;
+    height: auto;
+    margin-left: 2%;   
+    background-color: white;
+    box-shadow: 0.5px 0.5px 3px black;
+    align-content: flex-start;
+    border-width: 1px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.menuSubPaginas2{
+    width: 600px;
+    height: auto;
+    margin-left: 2%;   
+    background-color: white;
+    box-shadow: 0.5px 0.5px 3px black;
+    align-content: flex-start;
+    border-width: 1px;
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.hojaDeVida{
+    width: 800px;
+    height: auto;
+    margin-left: 5%;   
+    background-color: white;
+    box-shadow: 0.5px 0.5px 3px black;
+    align-content: flex-start;
+    /*border-width: 1px;*/
+    border-spacing: 15px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+span{
+    width: 150px;
+    text-align: left;
+}
+
+fieldset{
+    margin-left: 5%;
+    font: sans-serif;
+    font-size: 16px;
+    font-style: oblique;
+}
+
+.bp{    
+    background-image: url(../imagenes/bp.png);
+    width: 600px;
+    height: 300px;
+    margin: 3px;   
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btn_mini{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    background-size: contain;
+    color: #ffffff;
+    text-align: end;
+}
+
+.btn_listas{
+    width: 90px;
+    height: 42px;    
+    background-color: white;
+    background-size: contain;
+    color: black;
+}
+
+.modulos{
+    width: 50%;
+    height: auto;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.tablaConteo{
+   text-align: center;
+   font-family: Gill, Helvetica, sans-serif;
+   background-color: #C7F183;
+}
+
+.selectSc{
+    width: 200px;
+    height: 40px;
+    border-color: #333;
+    border: 2px inset;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-variant: annotation;
+}
+
+.textoListas{
+    width: auto;
+    height: 80px;
+    border-color: #333;
+    background-color: #e7e7e7;
+    border: 2px ;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 20px;
+    font-variant: annotation;
+}
+
+.textoMP{
+    font-size: 17px;
+    text-align: center;
+    font-family: Gill, Helvetica, sans-serif;
+    font-style: oblique;
+    height: 250px;
+}
+.textoMP2{
+    font-size: 17px;
+    text-align: center;
+    font-family: Gill, Helvetica, sans-serif;
+    font-style: oblique;
+}
+
+.tituloMP{
+    font-size: 20px;
+    text-align: center;
+    font-family: Gill, Helvetica, sans-serif;
+    font-style: oblique;
+}
+
+.indicador1{
+    text-align: center;
+    background-color: red;
+    border: black solid;
+}
+
+.indicador2{
+    text-align: center;
+    background-color: #F95006;
+    border: black solid;
+}
+
+.indicador3{
+    text-align: center;
+    background-color: #F9CD06;
+    border: black solid;
+}
+
+.indicador4{
+    text-align: center;
+    background-color: #8CB624;
+    border: black solid;
+}
+
+.indicador5{
+    text-align: center;
+    background-color: #A6E113;
+}
+
+.indicador1_1{
+    text-align: center;
+    background-color: red;
+}
+
+.indicador2_2{
+    text-align: center;
+    background-color: #EB5413;
+}
+
+.indicador3_3{
+    text-align: center;
+    background-color: #F3B016;
+}
+
+.indicador4_4{
+    text-align: center;
+    background-color: #E5D81C;
+}
+
+.indicador5_5{
+    text-align: center;
+    background-color: #CDE51C;
+}
+
+.indicador6_6{
+    text-align: center;
+    background-color: #A6E113;
+}
+
+.evidencia{
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(12,12);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+}
+
+.evidencia:hover{
+    -webkit-transform: scale(4,4);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 100ms;
+    -moz-transform: scale(12,12);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 100ms;
+}
