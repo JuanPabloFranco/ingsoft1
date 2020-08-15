@@ -1,14 +1,14 @@
 <html>
     <head>
-        <title>Categoria / Buscar</title>
+        <title>Proveedor / Buscar</title>
     </head>
     <body>
         <section id="new-prod-index">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 center-all-contens">
-                    <br><p style="color: black;" class="text-center lead">Buscar categoria</p>
-                    <div id="categoria">
-                        <form class="formRegCat"  action="Controlador/gestionCategoria.php" name="form" role="form" method="post" data-form="save" >
+                    <br><p style="color: black;" class="text-center lead">Buscar Proveedor</p>
+                    <div id="proveedor">
+                        <form class="formRegCat"  action="Controlador/gestionProveedor.php" name="form" role="form" method="post" data-form="save" >
                             <div class="form-group">
                                 <div class="input-group" >
                                     <div class="input-group-addon"><i class="fa fa-binoculars"></i></div>
@@ -26,17 +26,17 @@
         </section>
         <script>
             $(document).ready(function () {
-                $('#categoria form').submit(function (e) {
+                $('#proveedor form').submit(function (e) {
                     e.preventDefault();
-                    var informacion = $('#categoria form').serialize();
-                    var metodo = $('#categoria form').attr('method');
-                    var peticion = $('#categoria form').attr('action');
+                    var informacion = $('#proveedor form').serialize();
+                    var metodo = $('#proveedor form').attr('method');
+                    var peticion = $('#proveedor form').attr('action');
                     $.ajax({
                         type: metodo,
                         url: peticion,
                         data: informacion,
                         beforeSend: function () {
-                            $("#ResForm").html('Buscando Categoria <br><img src="Recursos/img/enviando.gif" class="center-all-contens">');
+                            $("#ResForm").html('Buscando proveedor <br><img src="Recursos/img/enviando.gif" class="center-all-contens">');
                         },
                         error: function () {
                             $("#ResForm").html("Ha ocurrido un error en el sistema");

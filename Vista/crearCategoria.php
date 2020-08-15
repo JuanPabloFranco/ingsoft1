@@ -51,19 +51,18 @@
                                         ?></textarea>                                
                                 </div>
                             </div>
-                            <br>  
                             <p>
                                 <?php
                                 if (isset($_GET['id'])) {
                                     ?>
                                     <input type="text" id="txtTipo" value="update" name="type" style="display: none">
                                     <input type="text" id="txId" value="<?php echo $_GET['id']?>" name="id" style="display: none">
-                                    <button type="submit" id="btnEditarCategoria" class="btn btn-default btn-block"><i class="fa fa-save"></i>&nbsp; Editar Categoria</button>
+                                    <button type="submit" id="btnEditarCategoria" class="btn btn-primary btn-block"><i class="fa fa-save"></i>&nbsp; Editar Categoria</button>
                                     <?php
                                 } else {
                                     ?>
                                     <input type="text" id="txtTipo" value="save" name="type" style="display: none">
-                                    <button type="submit" id="btnCrearCategoria" class="btn btn-default btn-block"><i class="fa fa-save"></i>&nbsp; Crear Categoria</button>                                    
+                                    <button type="submit" id="btnCrearCategoria" class="btn btn-primary btn-block"><i class="fa fa-save"></i>&nbsp; Crear Categoria</button>                                    
                                     <?php
                                 }
                                 ?>   

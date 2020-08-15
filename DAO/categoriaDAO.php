@@ -47,7 +47,7 @@ class categoriaDAO {
             ?>
             <div class="panel panel-info">                
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="tablaVisitantes">
+                    <table class="table table-bordered">
                         <thead class="">
                             <tr>
                                 <th class="text-center"><b>#</b></th>                                                  
