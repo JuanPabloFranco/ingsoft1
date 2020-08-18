@@ -13,27 +13,53 @@ class proveedorDAO {
     }
 
     public function guardar(clsProveedor $obj) {
-        if (consultasSQL::InsertSQL("proveedores", "nit, nombre_proveedor, direccion_proveedor, telefono_proveedor, web_proveedor", "'" . $obj->getNit() . "','" . 
-                $obj->getNombre_proveedor() . "','".$obj->getDireccion_proveedor()."','".$obj->getTelefono_proveedor()."','".$obj->getWeb_proveedor()."'")) {
-            ?>
-            <img src="Recursos/img/ok.png" class="center-all-contens"><br>El registro se completo con éxito<br>            
-            <?php
+        if ($obj->getNit() <> "" && $obj->getNombre_proveedor() <> "" && $obj->getDireccion_proveedor() <> "" && $obj->getTelefono_proveedor() <> "" && $obj->getWeb_proveedor() <> "") {
+            $busqueda = ejecutarSQL::consultar("SELECT id FROM proveedores WHERE nit='" . $obj->getNit() . "'");
+            if ($busqueda->num_rows > 0) {
+                ?>
+<img src="Recursos/img/error.png" class="center-all-contens"><br>Ya existe un producto registrado con el NIT <?php echo $obj->getNit(); ?>
+                <?php
+            } else {
+                if (consultasSQL::InsertSQL("proveedores", "nit, nombre_proveedor, direccion_proveedor, telefono_proveedor, web_proveedor", "'" . $obj->getNit() . "','" .
+                                $obj->getNombre_proveedor() . "','" . $obj->getDireccion_proveedor() . "','" . $obj->getTelefono_proveedor() . "','" . $obj->getWeb_proveedor() . "'")) {
+                    ?>
+                    <img src="Recursos/img/ok.png" class="center-all-contens"><br>El registro se completo con éxito<br>            
+                    <?php
+                } else {
+                    ?>
+                    <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al registrar el proveedor
+                    <?php
+                }
+            }
         } else {
             ?>
-            <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al registrar el proveedor
+            <img src=Recursos/img/error.png" class="center-all-contens"><br>Complete todos los campos
             <?php
         }
     }
 
     public function actualizar(clsProveedor $obj) {
-        if (consultasSQL::UpdateSQL("proveedores", "nit='" . $obj->getNit() . "', nombre_proveedor='" . $obj->getNombre_proveedor() . "', direccion_proveedor='" . 
-                $obj->getDireccion_proveedor() . "', telefono_proveedor='" . $obj->getTelefono_proveedor() . "',web_proveedor='" . $obj->getWeb_proveedor() . "'", "id=" . $obj->getId())) {
-            ?>
-            <img src="Recursos/img/ok.png" class="center-all-contens"><br>La actualización se completo con éxito<br>            
-            <?php
+        if ($obj->getNit() <> "" && $obj->getNombre_proveedor() <> "" && $obj->getDireccion_proveedor() <> "" && $obj->getTelefono_proveedor() <> "" && $obj->getWeb_proveedor() <> "") {
+            $busqueda = ejecutarSQL::consultar("SELECT id FROM proveedores WHERE nit='" . $obj->getNit() . "'");
+            if ($busqueda->num_rows > 0) {
+                ?>
+            <img src="Recursos/img/error.png" class="center-all-contens"><br>Ya existe un producto registrado con el NIT <?php echo $obj->getNit(); ?>
+                <?php
+            } else {
+                if (consultasSQL::UpdateSQL("proveedores", "nit='" . $obj->getNit() . "', nombre_proveedor='" . $obj->getNombre_proveedor() . "', direccion_proveedor='" .
+                                $obj->getDireccion_proveedor() . "', telefono_proveedor='" . $obj->getTelefono_proveedor() . "',web_proveedor='" . $obj->getWeb_proveedor() . "'", "id=" . $obj->getId())) {
+                    ?>
+                    <img src="Recursos/img/ok.png" class="center-all-contens"><br>La actualización se completo con éxito<br>            
+                    <?php
+                } else {
+                    ?>
+                    <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al actualizar el proveedor
+                    <?php
+                }
+            }
         } else {
             ?>
-            <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al actualizar el proveedor
+            <img src=Recursos/img/error.png" class="center-all-contens"><br>Complete todos los campos
             <?php
         }
     }
@@ -62,10 +88,10 @@ class proveedorDAO {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            while ($proveedor = mysqli_fetch_array($busqueda)) {
-                                $cant++;
-                                ?>
+            <?php
+            while ($proveedor = mysqli_fetch_array($busqueda)) {
+                $cant++;
+                ?>
                             <div id="busqueda_cat">
                                 <tr style="text-align: center">                      
                                     <td><?php echo $cant ?></td>
@@ -74,12 +100,12 @@ class proveedorDAO {
                                     <td><?php echo $proveedor['direccion_proveedor'] ?></td>
                                     <td><?php echo $proveedor['telefono_proveedor'] ?></td>
                                     <td><?php echo $proveedor['web_proveedor'] ?></td>
-                                    <td><a href="index.php?page=proveedorMP&&page2=crearProveedor&&id=<?php echo $proveedor['id'];?>"><img src="Recursos/img/btn_editar.png" style="width: 20px"></a></td>                                                                                                           
+                                    <td><a href="index.php?page=proveedorMP&&page2=crearProveedor&&id=<?php echo $proveedor['id']; ?>"><img src="Recursos/img/btn_editar.png" style="width: 20px"></a></td>                                                                                                           
                                 </tr>
                             </div>
-                            <?php
-                        }
-                        ?>
+                <?php
+            }
+            ?>
                         </tbody>
                     </table>
                 </div>
@@ -91,5 +117,6 @@ class proveedorDAO {
             <?php
         }
     }
+
 }
 ?>

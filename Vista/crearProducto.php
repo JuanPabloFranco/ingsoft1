@@ -4,7 +4,7 @@
         include 'Conexion/conexion.php';
         if (isset($_GET['id'])) {
             $consulta = mysqli_fetch_row(ejecutarSQL::consultar("SELECT codigo_prod, nombre_prod, marca_prod, id_categoria, id_proveedor, precio_prod FROM proveedores, productos, categorias WHERE "
-                    . "productos.id_categoria=categorias.id AND productos.id_proveedor=proveedores.id AND productos.id=" . $_GET['id']));
+                            . "productos.id_categoria=categorias.id AND productos.id_proveedor=proveedores.id AND productos.id=" . $_GET['id']));
             ?>
             <title>Producto / Editar</title>
             <?php
@@ -14,6 +14,31 @@
             <?php
         }
         ?>    
+        <script>
+            $(document).ready(function () {
+                $('#divProducto form').submit(function (e) {
+                    e.preventDefault();
+                    var informacion = $('#divProducto form').serialize();
+                    var metodo = $('#divProducto form').attr('method');
+                    var peticion = $('#divProducto form').attr('action');
+                    $.ajax({
+                        type: metodo,
+                        url: peticion,
+                        data: informacion,
+                        beforeSend: function () {
+                            $("#ResFormP").html('Procesando <br><img src="Recursos/img/enviando.gif" class="center-all-contens">');
+                        },
+                        error: function () {
+                            $("#ResFormP").html("Ha ocurrido un error en el sistema");
+                        },
+                        success: function (data) {
+                            $("#ResFormP").html(data);
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
     </head>
     <body>
         <section id="new-prod-index">
@@ -30,7 +55,7 @@
                         <?php
                     }
                     ?>
-                    <div id="producto">
+                    <div id="divProducto">
                         <form class="formRegProv"  action="Controlador/gestionProducto.php" name="form" role="form" method="post" data-form="save" >
                             <div class="form-group">
                                 <div class="input-group" >
@@ -54,7 +79,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-group" >
-                                    <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+                                    <div class="input-group-addon"><i class="fa fa-bookmark"></i></div>
                                     <input class="form-control all-elements-tooltip" id="txtMarca" type="text" placeholder="Ingrese la marca del producto" required name="marca_prod" data-toggle="tooltip" data-placement="top" title="Ingrese la marca del producto" value="<?php
                                     if (isset($_GET['id'])) {
                                         echo $consulta[2];
@@ -64,7 +89,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-group" >
-                                    <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
+                                    <div class="input-group-addon"><i class="fa fa-sitemap"></i></div>
                                     <?php
                                     $resultCat = ejecutarSQL::consultar("SELECT * FROM categorias ORDER BY nombre_categoria");
                                     $categorias = "";
@@ -84,7 +109,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-group" >
-                                    <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
+                                    <div class="input-group-addon"><i class="fa fa-building"></i></div>
                                     <?php
                                     $resultProv = ejecutarSQL::consultar("SELECT * FROM proveedores ORDER BY nombre_proveedor");
                                     $proveedores = "";
@@ -104,7 +129,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-group" >
-                                    <div class="input-group-addon"><i class="fa fa-google"></i></div>
+                                    <div class="input-group-addon"><i class="fa fa-usd"></i></div>
                                     <input class="form-control all-elements-tooltip" id="txtPrecio" type="number" placeholder="Ingrese el precio del producto" required name="precio_prod" data-toggle="tooltip" data-placement="top" title="Ingrese el precio del producto" value="<?php
                                     if (isset($_GET['id'])) {
                                         echo $consulta[5];
@@ -128,40 +153,23 @@
                                 }
                                 ?>   
                             </p>
-                            <div class="ResForm" id="ResForm" style="width: 100%; color: black; text-align: center; margin: 0;"></div>
+                            <div class="ResFormP" id="ResFormP" style="width: 100%; color: black; text-align: center; margin: 0;"></div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-        <script>
-            document.getElementById("selCategoria").value = "<?php echo $consulta[3]?>";
-            document.getElementById("selProveedor").value = "<?php echo $consulta[4]?>";
-            $(document).ready(function () {
-                $('#producto form').submit(function (e) {
-                    e.preventDefault();
-                    var informacion = $('#producto form').serialize();
-                    var metodo = $('#producto form').attr('method');
-                    var peticion = $('#producto form').attr('action');
-                    $.ajax({
-                        type: metodo,
-                        url: peticion,
-                        data: informacion,
-                        beforeSend: function () {
-                            $("#ResForm").html('Procesando <br><img src="Recursos/img/enviando.gif" class="center-all-contens">');
-                        },
-                        error: function () {
-                            $("#ResForm").html("Ha ocurrido un error en el sistema");
-                        },
-                        success: function (data) {
-                            $("#ResForm").html(data);
-                        }
-                    });
-                    return false;
-                });
+        <?php
+        if (isset($_GET['id'])) {
+            ?>
+            <script>
+                document.getElementById("selCategoria").value = "<?php echo $consulta[3] ?>";
+                document.getElementById("selProveedor").value = "<?php echo $consulta[4] ?>";
+            </script>
+            <?php
+        }
+        ?>
 
-            });
-        </script>
 
         <?php
 // put your code here

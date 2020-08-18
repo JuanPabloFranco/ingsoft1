@@ -7,6 +7,7 @@ $dia = date("d");
 <html>
     <head>
         <meta charset="UTF-8"> 
+        <link rel="shortcut icon" type="image/x-icon" href="Recursos/img/logo_eam.ico" />
         <meta name="google-site-verification" content="uH5l5ImkziBtdea5yssScH2VMJqSIpS3VmPfhzwZUt8" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

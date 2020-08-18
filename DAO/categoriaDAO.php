@@ -13,25 +13,51 @@ class categoriaDAO {
     }
 
     public function guardar(clsCategoria $obj) {
-        if (consultasSQL::InsertSQL("categorias", "nombre_categoria, descripcion_categoria", "'" . $obj->getNombre_categoria() . "','" . $obj->getDescripcion_categoria() . "'")) {
-            ?>
-            <img src="Recursos/img/ok.png" class="center-all-contens"><br>El registro se completo con éxito<br>            
-            <?php
+        if ($obj->getNombre_categoria() <> "" && $obj->getDescripcion_categoria() <> "") {
+            $busqueda = ejecutarSQL::consultar("SELECT id FROM categorias WHERE nombre_categoria='" . $obj->getNombre_categoria() . "'");
+            if ($busqueda->num_rows > 0) {
+                ?>
+                <img src="Recursos/img/error.png" class="center-all-contens"><br>Ya existe una categoria registrada con el nombre <?php echo $obj->getNombre_categoria(); ?>
+                <?php
+            } else {
+                if (consultasSQL::InsertSQL("categorias", "nombre_categoria, descripcion_categoria", "'" . $obj->getNombre_categoria() . "','" . $obj->getDescripcion_categoria() . "'")) {
+                    ?>
+                    <img src="Recursos/img/ok.png" class="center-all-contens"><br>El registro se completo con éxito<br>            
+                    <?php
+                } else {
+                    ?>
+                    <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al registrar la categoria
+                    <?php
+                }
+            }
         } else {
             ?>
-            <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al registrar la categoria
+            <img src=Recursos/img/error.png" class="center-all-contens"><br>Complete todos los campos
             <?php
         }
     }
 
     public function actualizar(clsCategoria $obj) {
-        if (consultasSQL::UpdateSQL("categorias", "nombre_categoria='" . $obj->getNombre_categoria() . "', descripcion_categoria='" . $obj->getDescripcion_categoria() . "'", "id=" . $obj->getId())) {
-            ?>
-            <img src="Recursos/img/ok.png" class="center-all-contens"><br>La actualización se completo con éxito<br>            
-            <?php
+        if ($obj->getNombre_categoria() <> "" && $obj->getDescripcion_categoria() <> "") {
+            $busqueda = ejecutarSQL::consultar("SELECT id FROM categorias WHERE nombre_categoria='" . $obj->getNombre_categoria() . "'");
+            if ($busqueda->num_rows > 0) {
+                ?>
+                <img src="Recursos/img/error.png" class="center-all-contens"><br>Ya existe una categoria registrada con el nombre <?php echo $obj->getNombre_categoria(); ?>
+                <?php
+            } else {
+                if (consultasSQL::UpdateSQL("categorias", "nombre_categoria='" . $obj->getNombre_categoria() . "', descripcion_categoria='" . $obj->getDescripcion_categoria() . "'", "id=" . $obj->getId())) {
+                    ?>
+                    <img src="Recursos/img/ok.png" class="center-all-contens"><br>La actualización se completo con éxito<br>            
+                    <?php
+                } else {
+                    ?>
+                    <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al actualizar la categoria
+                    <?php
+                }
+            }
         } else {
             ?>
-            <img src=Recursos/img/error.png" class="center-all-contens"><br>Ha ocurrido un error al actualizar la categoria
+            <img src=Recursos/img/error.png" class="center-all-contens"><br>Complete todos los campos
             <?php
         }
     }
@@ -57,21 +83,21 @@ class categoriaDAO {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            while ($categoria = mysqli_fetch_array($busqueda)) {
-                                $cant++;
-                                ?>
+            <?php
+            while ($categoria = mysqli_fetch_array($busqueda)) {
+                $cant++;
+                ?>
                             <div id="busqueda_cat">
                                 <tr style="text-align: center">                      
                                     <td><?php echo $cant ?></td>
                                     <td><?php echo $categoria['nombre_categoria'] ?></td>
                                     <td><?php echo $categoria['descripcion_categoria'] ?></td>
-                                    <td><a href="index.php?page=categoriaMP&&page2=crearCategoria&&id=<?php echo $categoria['id'];?>"><img src="Recursos/img/btn_editar.png" style="width: 15%"></a></td>                                                                                                           
+                                    <td><a href="index.php?page=categoriaMP&&page2=crearCategoria&&id=<?php echo $categoria['id']; ?>"><img src="Recursos/img/btn_editar.png" style="width: 15%"></a></td>                                                                                                           
                                 </tr>
                             </div>
-                            <?php
-                        }
-                        ?>
+                <?php
+            }
+            ?>
                         </tbody>
                     </table>
                 </div>

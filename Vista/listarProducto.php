@@ -21,7 +21,8 @@
                         <table class="table table-bordered" id="tabla" >
                             <thead class="">
                                 <tr >
-                                    <th class="text-center"><b>#</b></th>Código</b></th>
+                                    <th class="text-center"><b>#</b></th>
+                                    <th class="text-center"><b>Código</b></th>
                                     <th class="text-center"><b>Nombre del producto</b></th>
                                     <th class="text-center"><b>Marca</b></th>
                                     <th class="text-center"><b>Categoria</b></th>
